@@ -159,7 +159,7 @@ At this point we might want to commit these changes to your version control syst
 1. **Create a GitHub account** (if you don't already have one) at [github.com](https://github.com).
 2. Once signed in, click the **New** button on GitHub's homepage to create a repository.
 
-   ![Create a New Repository](C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/Adv_LabLecture1/NewGit.PNG)
+   ![Create a New Repository](NewGit.PNG)
 
    - **Repository Name**: Enter a name for your repository.
    - **Description**: Write a brief description.
@@ -168,11 +168,11 @@ At this point we might want to commit these changes to your version control syst
    - **Add .gitignore**: Select R from the dropdown list.
    - Click **Create repository**.
 
-   ![GitHub Repository](C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/Adv_LabLecture1/GithubPage.PNG)
+   ![GitHub Repository](GithubPage.PNG)
 
 3. Copy the repository URL from GitHub by clicking the **Code** button and copying the URL.
 
-   ![Repository URL](C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/Adv_LabLecture1/Code.PNG)
+   ![Repository URL](Code.PNG)
 
 
 ### Install and Enable Git in RStudio
@@ -197,14 +197,14 @@ If this is your first time using Git with GitHub and R Studio, you may need to c
 2. Select **Version Control > Git** to initialize the project as a Git repository.
 3. Enter the **GitHub repository URL** you copied earlier, and choose a local folder to clone the repository.
 
-   ![Version Control in RStudio](C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/Adv_LabLecture1/VersionControlProject.PNG)
+   ![Version Control in RStudio](VersionControlProject.PNG)
 
 #### Open an Existing Project from GitHub
 If you have an existing project with Git enabled, select **Version Control > Git** in RStudio and provide the repository URL from GitHub.
 
 Once you clone the repository, you will see a **Git** tab in RStudio. This tab will help you manage your version control activities, including staging, committing, and pushing changes.
 
-   ![Git Tab in RStudio](C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/Adv_LabLecture1/Gittab.PNG)
+   ![Git Tab in RStudio](Gittab.PNG)
 
 
 
@@ -248,7 +248,7 @@ library(tidyverse)
 1. Let's also grab some data [here](https://drive.google.com/drive/folders/1YuX5oWjKS6vZx4zNyPwBKuiw9EJYNX5L?usp=sharing). This is spatial point dataset that I have collected as part of a project in the Open Spaces and Moutain Parks of Boulder Colorado. It consist of the points where people have taken pictures using Flickr and Panramio. We have also collected several spatial varibles that might explain why individuals might be taking photographs at these points and all other points in park. We will import the data as a sf spatial dataset.
 
 ```{r}
-boulder <- st_read("C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/BoulderSocialMedia.shp")
+boulder <- st_read("BoulderSocialMedia.shp")
 boulder
 ```
 This Here are the details of data: 
@@ -357,7 +357,7 @@ magma(10)
 
 
 ```{r}
-boulder <- st_read("C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/BoulderSocialMedia.shp")
+boulder <- st_read("BoulderSocialMedia.shp")
 ggplot() +
     geom_sf(data = boulder, aes(color=PT_Elev),
     fill = NA, alpha = .2) + 
